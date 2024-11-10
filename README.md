@@ -24,29 +24,29 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 
 ### Entidades e Atributos:
 #### * Usuário:
-1. Nome: Varchar (100);
-2. Datanasc: Date “DD-MM-YYYY”;
-3. Email: Varchar (50)(Chave Primária)(e-mail único para identificar o usuário);
-4. Senha: Varchar (12).
++ Nome: Varchar (100);
++ Datanasc: Date “DD-MM-YYYY”;
++   Email: Varchar (50)(Chave Primária)(e-mail único para identificar o usuário);
++    Senha: Varchar (12).
   
 #### * Pagamento:
-1. CPF: Int “11 dígitos” (atributo único, chave primária);
-2. CEP: Int “8 dígitos”;
-3. Tipo de Pagamento: Varchar (50).
++ CPF: Int “11 dígitos” (atributo único, chave primária);
++ CEP: Int “8 dígitos”;
++ Tipo de Pagamento: Varchar (50).
   
 #### * Livros:
-1. Código do livro: Int;
-2. Gênero: Varchar (100);
-3. Título: Varchar (100); 
-4. Lançamento: Date “DD-MM-YYYY”;
-5. Preço: Char “R$ 000,00”;
-6. Formato do Arquivo: Char “PDF, e-PUB, MOBI, KPF, AZW, IBA”.
++ Código do livro: Int;
++ Gênero: Varchar (100);
++ Título: Varchar (100); 
++ Lançamento: Date “DD-MM-YYYY”;
++ Preço: Char “R$ 000,00”;
++ Formato do Arquivo: Char “PDF, e-PUB, MOBI, KPF, AZW, IBA”.
 
 ### Relacionamentos:
-#### * Usuário-Pagamento: Relacionamento Realiza
-1. Um Usuário pode ter várias formas de pagamento (relacionamento 1);
-2. Exemplo de Cardinalidade: Um Usuário Realiza um ou mais Pagamentos, e um Pagamento pertence a um Usuário.
+#### 1. Usuário-Pagamento: Relacionamento Realiza
+- Um Usuário pode ter várias formas de pagamento (relacionamento 1);
+- Exemplo de Cardinalidade: Um Usuário Realiza um ou mais Pagamentos, e um Pagamento pertence a um Usuário.
 #### * Usuário-Livro: Relacionamento Compra
-1. Um Usuário pode comprar vários Livros, e um Livro pode ser comprado por vários Usuários (relacionamento N);
-2. Exemplo de Cardinalidade: Um Usuário Compra um ou mais Livros, e um Livro pode ser comprado por vários Usuários.
+- Um Usuário pode comprar vários Livros, e um Livro pode ser comprado por vários Usuários (relacionamento N);
+- Exemplo de Cardinalidade: Um Usuário Compra um ou mais Livros, e um Livro pode ser comprado por vários Usuários.
 
