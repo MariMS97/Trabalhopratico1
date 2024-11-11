@@ -53,9 +53,20 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 - Um Usuário pode comprar vários Livros, e um Livro pode ser comprado por vários Usuários (relacionamento N);
 - Exemplo de Cardinalidade: Um Usuário Compra um ou mais Livros, e um Livro pode ser comprado por vários Usuários.
 
-##  Modelo Lógico ->
+##  3. Modelo Lógico ->
 
 As tabelas principais são:
 + Usuário (Nome, Datanasc, Email, Senha);
 + Pagamento (CPF, CEP, Tipo_pagamento);
 + Livro (cod_livro, Genero, Titulo, Lançamento, Preco_livro, Formato_arquivo).
+
+Chaves Primarias e Estrangeiras:
++ id_usuario é chave primária em Usuarios.
++ id_livro é chave primária em Livros.
++ id_pagamento é chave primária em Pagamentos.
++ id_usuario em Pagamentos é uma chave estrangeira que referência Usuarios.
+
+## 4. Normalização
+
+### 1FN:
+
