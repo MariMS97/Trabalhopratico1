@@ -70,3 +70,18 @@ Chaves Primarias e Estrangeiras:
 
 ### 1FN:
 
+#### A 1ª Forma Normal exige:
+
++ Eliminação de grupos repetidos.
++ Garantia de que cada campo contenha apenas um valor (colunas atômicas).
++ Um identificador único para cada linha da tabela (chave primária).
+  
+#### Análise das Tabelas em 1FN
+
++ Tabela Usuário: já está em 1FN, pois cada coluna é atômica e não há grupos repetidos.
++ Tabela Pagamento: está quase em 1FN, mas alguns ajustes são necessários:
++ O CPF deve ser tratado como um valor atômico e único.
++ Tabela Livros: o campo FormatoArquivo não é atômico, pois contém múltiplos valores possíveis.
+  
+#### Ajustes para atender a 1FN
++ Criar uma tabela associativa LivroFormato para relacionar o Livro com FormatoArquivo, eliminando valores não atômicos.
