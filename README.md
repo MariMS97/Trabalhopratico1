@@ -3,7 +3,7 @@
 Livraria Via Literária 
 Por: Mariana Magalhães Silva
 
-## 1-Resumo do Negócio:
+## 1-Resumo do Negócio->
 
 Este sistema destina-se a uma livraria online com uma variedade de livros em formato digital. O público-alvo inclui leitores de todos os gêneros literários, com foco tanto em ficção quanto em não-ficção. O sistema permite a criação de usuários, processamento de pagamentos e gerenciamento de inventário de livros. Principais atores incluem administradores, clientes e fornecedores. Serviços oferecidos abrangem a venda de e-books em formatos como PDF, ePub, MOBI, entre outros.
 
@@ -20,22 +20,25 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 - E-mails dos usuários devem ser únicos.
 - Os preços dos livros são armazenados em uma faixa padrão com prefixo em reais.
 
-## 2- Modelo Conceitual no padrão MER (Modelo Entidade-Relacionamento);
+## 2- Modelo Conceitual no padrão MER (Modelo Entidade-Relacionamento)->
 
 ### Entidades e Atributos:
 #### * Usuário:
++ id_usuario: Int;
 + Nome: Varchar (100);
 + Datanasc: Date “DD-MM-YYYY”;
-+   Email: Varchar (50)(Chave Primária)(e-mail único para identificar o usuário);
-+    Senha: Varchar (12).
++ Email: Varchar (50)(Chave Primária)(e-mail único para identificar o usuário);
++ Senha: Varchar (12).
   
 #### * Pagamento:
++ id_pagamento: Int;
++ id_usuario: Int;
 + CPF: Int “11 dígitos” (atributo único, chave primária);
 + CEP: Int “8 dígitos”;
 + Tipo de Pagamento: Varchar (50).
   
 #### * Livros:
-+ Código do livro: Int;
++ id_livro: Int;
 + Gênero: Varchar (100);
 + Título: Varchar (100); 
 + Lançamento: Date “DD-MM-YYYY”;
@@ -50,3 +53,9 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 - Um Usuário pode comprar vários Livros, e um Livro pode ser comprado por vários Usuários (relacionamento N);
 - Exemplo de Cardinalidade: Um Usuário Compra um ou mais Livros, e um Livro pode ser comprado por vários Usuários.
 
+##  Modelo Lógico ->
+
+As tabelas principais são:
++ Usuário (Nome, Datanasc, Email, Senha);
++ Pagamento (CPF, CEP, Tipo_pagamento);
++ Livro (cod_livro, Genero, Titulo, Lançamento, Preco_livro, Formato_arquivo).
