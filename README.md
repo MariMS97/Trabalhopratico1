@@ -106,7 +106,7 @@ Chaves Primarias e Estrangeiras:
 |id_usuario   | Int               |
 |CPF	        | Varchar(11)       |
 |CEP	        | Varchar(8)        |
-|TipoPagamento| Varchar(15)       |
+|Tipopagamento| Varchar(15)       |
                                                         
 #### Tabela Livro: 
 
