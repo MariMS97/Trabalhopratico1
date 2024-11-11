@@ -42,7 +42,7 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 + Gênero: Varchar (100);
 + Título: Varchar (100); 
 + Lançamento: Date “DD-MM-YYYY”;
-+ Preço: Char “R$ 000,00”;
++ Preço_livro: Char “R$ 000,00”;
 + Formato do Arquivo: Char “PDF, e-PUB, MOBI, KPF, AZW, IBA”.
 
 ### Relacionamentos:
