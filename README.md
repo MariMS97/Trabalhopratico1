@@ -85,3 +85,80 @@ Chaves Primarias e Estrangeiras:
   
 #### Ajustes para atender a 1FN
 + Criar uma tabela associativa LivroFormato para relacionar o Livro com FormatoArquivo, eliminando valores não atômicos.
+
+###  Estrutura após 1FN
+
+#### Tabela Usuario:
+
+| Campo       | Tipo              |
+|-------------|-------------------|          
+|Id_usuario	  | Int               |
+|Nome	        | Varchar(100)      |
+|Datanasc	    | Date(DD-MM-YYYY)  |
+|Email	      | Varchar(50)       |
+|Senha	      | Varchar(255)      |
+
+#### Tabela Pagamento:
+
+| Campo       | Tipo              |
+|-------------|-------------------|          
+|id_pagamento | Int               |
+|id_usuario   | Int               |
+|CPF	        | Varchar(11)       |
+|CEP	        | Varchar(8)        |
+|TipoPagamento| Varchar(15)       |
+                                                        
+#### Tabela Livro: 
+
+| Campo       | Tipo              |
+|-------------|-------------------|          
+|Id_livro	    | Int               |
+|id_genero	  | Int               |
+|Titulo	      | Varchar(100)      |
+|Lancamento	  | Date              |
+|Preco	      | Decimal(6, 2)     |
+|Formato      | Varchar(20)       |
+                                                      
+#### Tabela GeneroLivro: 
+
+| Campo       | Tipo              |
+|-------------|-------------------|          
+|Id_genero	  | Int               |
+|Descricao	  | Varchar(100)      |  
+
+### 2FN:
+
+A 2FN exige que todas as tabelas estejam em 1FN e que todos os atributos não chave sejam totalmente dependentes da chave primária. As tabelas já possuem chaves primárias simples, os dados agora atendem à 2FN.
+
+### 3FN:
+
+#### A 3FN exige que:
++ A tabela esteja em 2FN.
++ Não haja dependências transitivas (um campo não chave não deve depender de outro campo não chave).
+  
+#### Ajustes para 3FN:
+Separei o gêneros de livros (GeneroLivro) para evitar dependências transitivas.
+Após a 3FN, o design está otimizado e livre de dependências transitivas.
+
+### Modelo lógico depois da normalização:
+
+#### Usuario:
+
++ Chaves Primárias: *id_usuario* identifica exclusivamente cada usuário.
++ Campos Únicos: *Email* garante que nenhum usuário tenha um email duplicado.
++ Observação: A coluna *Senha* foi aumentada para 255 caracteres para maior segurança, acomodando hash de senhas.
+
+#### Pagamento:
+
++ Chaves Primárias: *id_pagamento* identifica unicamente cada pagamento.
++ Chave Estrangeira: *id_usuario* referencia Usuario, criando uma relação 1 (um usuário pode ter múltiplos pagamentos).
++ Campos Únicos: *CPF* garante que cada *CPF* seja único.
+
+#### Livro:
+
++ Chaves Primárias: *id_livro* identifica unicamente cada livro.
++ Chave Estrangeira: *id_genero* referencia *GeneroLivro*, associando o livro a um gênero específico.
+
+#### GeneroLivro:
+
++ Chaves Primárias: *id_genero* identifica cada gênero exclusivamente.
