@@ -23,6 +23,7 @@ CREATE TABLE Livro (
     Id_livro INT PRIMARY KEY,
     id_genero INT,
     Titulo VARCHAR(100),
+    Autor VARCHAR(100),
     Lancamento DATE,
     Preco DECIMAL(6, 2),
     Formato VARCHAR(20),
