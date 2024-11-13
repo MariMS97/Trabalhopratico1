@@ -1,0 +1,25 @@
+-- 1. Listar todos os usuários com seus respectivos métodos de pagamento
+SELECT Usuario.Nome, Usuario.Email, Pagamento.TipoPagamento
+FROM Usuario
+JOIN Pagamento ON Usuario.Id_usuario = Pagamento.Id_usuario;
+
+-- 2. Exibir todos os livros disponíveis, com seu gênero e preço
+SELECT Livro.Titulo, GeneroLivro.Descricao AS Genero, Livro.Preco
+FROM Livro
+JOIN GeneroLivro ON Livro.Id_genero = GeneroLivro.Id_genero;
+
+-- 3. Exibir livros lançados antes de uma determinada data
+SELECT Titulo, Lancamento
+FROM Livro
+WHERE Lancamento < '2000-01-01';
+
+-- 4. Contar o número de livros por gênero
+SELECT GeneroLivro.Descricao AS Genero, COUNT(Livro.Id_livro) AS Quantidade
+FROM Livro
+JOIN GeneroLivro ON Livro.Id_genero = GeneroLivro.Id_genero
+GROUP BY GeneroLivro.Descricao;
+
+-- 5. Exibir o total de vendas (exemplo de agregação de dados)
+SELECT SUM(Livro.Preco) AS TotalVendas
+FROM Livro
+JOIN Pagamento ON Livro.Id_livro = Pagamento.Id_pagamento;
