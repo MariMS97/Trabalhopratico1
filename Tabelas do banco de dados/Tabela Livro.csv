@@ -1,0 +1,8 @@
+Id_livro,Id_genero,Titulo,Autor,Lancamento,Preco,Formato
+1,1,"Harry Potter e a pedro filosofal",J.K.Rowling,1997-06-26,20.90,e-PUB
+2,2,"A seleção","Kiera Cass",2012-04-14,15.80,PDF
+3,3,"Dia a dia com Billy Graham","Kiera Cass",2018-10-30,10.80,MOBI
+4,4,"Assassinato no expresso do oriente","Agatha Cristie",1934-01-01,12.50,KPF
+5,5,"O Iluminado","Stephen King",1997-01-28,18.00,AZW
+6,6,"Em busca de mim","Viola Davis",2022-07-04,11.60,IBA
+7,7,Frankienstein,"Mary Shelley",1818-01-01,18.90,e-PUB
