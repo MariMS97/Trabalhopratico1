@@ -40,7 +40,8 @@ Este sistema destina-se a uma livraria online com uma variedade de livros em for
 #### * Livros:
 + id_livro: Int;
 + Gênero: Varchar (100);
-+ Título: Varchar (100); 
++ Título: Varchar (100);
++ Autor: Varchar (100); 
 + Lançamento: Date “DD-MM-YYYY”;
 + Preço_livro: Char “R$ 000,00”;
 + Formato do Arquivo: Char “PDF, e-PUB, MOBI, KPF, AZW, IBA”.
@@ -115,6 +116,7 @@ Chaves Primarias e Estrangeiras:
 |Id_livro	    | Int               |
 |id_genero	  | Int               |
 |Titulo	      | Varchar(100)      |
+|Autor        | Varchar(100)
 |Lancamento	  | Date              |
 |Preco	      | Decimal(6, 2)     |
 |Formato      | Varchar(20)       |
