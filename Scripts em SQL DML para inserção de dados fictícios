@@ -1,0 +1,35 @@
+INSERT INTO Usuario (Nome, Datanasc, Email, Senha) VALUES
+('Mariana', '1997-10-25', 'mariana@live.com', '123456'),
+('Maria Elisa', '2001-06-04', 'mariaelisa@gmail.com', '654321'),
+('Edno', '1965-09-14', 'edno@hotmail.com', '132546'),
+('Sirlene', '1965-03-04', 'sirlene@outlook.com', '315264'),
+('Cleusa', '1950-03-22', 'cleusa@yahoo.com', '351642'),
+('Míriam', '1970-06-12', 'miriam@icloud.com', '536142'),
+('João Pedro', '2007-04-02', 'joaop@hotmail.com', '563421');
+
+INSERT INTO Pagamento (CPF, CEP, TipoPagamento) VALUES 
+('28522975800', '76292987', 'PIX'),
+('59854123665', '65478965', 'Débito'),
+('78965412332', '74196325', 'Crédito'),
+('96322585489', '14785235', 'Boleto'),
+('35795185265', '95175365', 'PIX'),
+('15935725658', '65498741', 'PIX'),
+('45632198714', '35415999', 'PIX');
+
+INSERT INTO GeneroLivro (Descricao) VALUES 
+('Fantasia'),
+('Romance'),
+('Literatura Cristã'),
+('Ficção Policial'),
+('Terror'),
+('Biografia'),
+('Ficção Científica');
+
+INSERT INTO Livro (Titulo, Autor, Lancamento, Preco, Formato) VALUES
+('Harry Potter e a pedro filosofal', 'J.K.Rowling', '1997-06-26', 20.90, 'e-PUB'),
+('A seleção', 'Kiera Cass', '2012-04-14', 15.80, 'PDF'),
+('Dia a dia com Billy Graham', 'Kiera Cass', '2018-10-30', 10.80, 'MOBI'),
+('Assassinato no expresso do oriente', 'Agatha Cristie', '1934-01-01',12.50, 'KPF'),
+('O Iluminado', 'Stephen King', '1997-01-28', 18.00, 'AZW'),
+('Em busca de mim', 'Viola Davis', '2022-07-04', 11.60, 'IBA'),
+('Frankienstein', 'Mary Shelley', '1818-01-01', 18.90, 'e-PUB');
