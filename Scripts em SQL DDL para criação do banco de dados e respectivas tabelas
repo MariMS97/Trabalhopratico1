@@ -1,0 +1,31 @@
+create DATABASE Livraria;
+USE Livraria;
+create table Usuario (
+Id_usuario INT PRIMARY KEY,
+Nome VARCHAR(100) NOT NULL,
+Datanasc DATE NOT NULL,
+Email VARCHAR(50),
+Senha VARCHAR (12)
+);
+CREATE TABLE Pagamento (
+    id_pagamento INT PRIMARY KEY,
+    id_usuario INT,
+    CPF VARCHAR(11),
+    CEP VARCHAR(8),
+    TipoPagamento VARCHAR(15),
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(Id_usuario)
+);
+CREATE TABLE GeneroLivro (
+    Id_genero INT PRIMARY KEY,
+    Descricao VARCHAR(100)
+);
+CREATE TABLE Livro (
+    Id_livro INT PRIMARY KEY,
+    id_genero INT,
+    Titulo VARCHAR(100),
+    Lancamento DATE,
+    Preco DECIMAL(6, 2),
+    Formato VARCHAR(20),
+    FOREIGN KEY (id_genero) REFERENCES GeneroLivro(Id_genero)
+);
+SHOW TABLES;
