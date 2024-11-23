@@ -5,7 +5,7 @@ Por: Mariana Magalhães Silva
 
 ## 1-Resumo do Negócio->
 
-Este sistema destina-se a uma livraria online com uma variedade de livros em formato digital. O público-alvo inclui leitores de todos os gêneros literários, com foco tanto em ficção quanto em não-ficção. O sistema permite a criação de usuários, processamento de pagamentos e gerenciamento de inventário de livros. Principais atores incluem administradores, clientes e fornecedores. Serviços oferecidos abrangem a venda de e-books em formatos como PDF, ePub, MOBI, entre outros.
+Este sistema destina-se a uma livraria online com uma variedade de livros em formato digital. O público-alvo inclui leitores de todos os gêneros literários, com foco tanto em ficção quanto em não-ficção. O sistema permite a criação de usuários, processamento de pagamentos e livros disponiveis. Principais atores incluem administradores, clientes e fornecedores. Serviços oferecidos abrangem a venda de e-books em formatos como PDF, ePub, MOBI, entre outros.
 
 ### Fluxos de Processos Cotidianos:
 1. Cadastro de novos usuários.
